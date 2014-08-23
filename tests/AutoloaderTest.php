@@ -12,12 +12,12 @@ class AutoloaderTest extends \PHPUnit_Framework_TestCase
 
     public function testLoad()
     {
-        $classMap = [
+        $classMap = array(
             'Autoloader\\Tests\\Namespace1' => __DIR__ . '/Namespace1',
             'Autoloader\\Tests\\Namespace2' => __DIR__ . '/Namespace2'
-            ];
+            );
 
         $autoloader = Autoloader::getInstance();
-        $autoloader->load($classMap);
+        $autoloader->register($classMap);
     }
 }
